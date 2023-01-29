@@ -38,5 +38,6 @@ path('rango/', include('rango.urls')),
 # The above maps any URLs starting with rango/ to be handled by rango.
 
 path('admin/', admin.site.urls),
+path('category/<slug:category_name_slug>/',views.show_category, name='show_category'),
 ]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
