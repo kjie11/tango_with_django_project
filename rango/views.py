@@ -30,7 +30,7 @@ def index(request):
     context_dict['categories'] = category_list
     context_dict['pages']=page_list
     visitor_cookie_handler(request)
-    
+
     # context_dict['boldmessage2']='There are no pages present.'
 
     HttpResponse("Rango says here is the about page.")
