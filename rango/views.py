@@ -29,16 +29,15 @@ def index(request):
     context_dict['boldmessage'] = 'Crunchy, creamy, cookie, candy, cupcake!'
     context_dict['categories'] = category_list
     context_dict['pages']=page_list
-    visitor_cookie_handler(request)
+    # visitor_cookie_handler(request)
 
     # context_dict['boldmessage2']='There are no pages present.'
 
-    HttpResponse("Rango says here is the about page.")
+    # HttpResponse("Rango says here is the about page.")
 
 
-    response=render(request, 'rango/index.html', context=context_dict)
+    return render(request, 'rango/index.html', context=context_dict)
 
-    return response
 
 
 
